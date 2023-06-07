@@ -1,0 +1,57 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Dept</th>
+        <th>Salary</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.name }}</td>
+        <td>{{ employee.age }}</td>
+        <td>{{ employee.dept }}</td>
+        <td>{{ employee.sal }}</td>
+        <td>
+          <button  class="btn btn-primary m-1" (click)="deleteEmployee(employee)">Delete</button>
+          <button class="btn btn-primary" (click)="showEmployeeDetails(employee)" data-toggle="modal" data-target="#employeeModal">Details</button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="employeeModal" tabindex="-1" role="dialog" aria-labelledby="employeeModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="employeeModalLabel">Employee Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Name: {{ selectedEmployee?.name }}</p>
+          <p>Age: {{ selectedEmployee?.age }}</p>
+          <p>Dept: {{ selectedEmployee?.dept }}</p>
+          <p>Salary: {{ selectedEmployee?.sal }}</p>
+        </div>
+      </div>
+    </div>
+</div>
+<form (submit)="addEmployee()">
+    <input class="m-1" type="text" [(ngModel)]="newEmployee.name" placeholder="Name" required>
+    <input class="m-1" type="number" [(ngModel)]="newEmployee.age" placeholder="Age" required>
+    <input class="m-1" type="text" [(ngModel)]="newEmployee.dept" placeholder="Dept" required>
+    <input class="m-1" type="number" [(ngModel)]="newEmployee.sal" placeholder="Salary" required>
+    <button class="btn btn-primary m-1" type="submit">Add Employee</button>
+</form>
+
+
+
+
+  
+  
+
+  

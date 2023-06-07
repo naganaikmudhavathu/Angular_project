@@ -1,0 +1,130 @@
+<br><h3 class="text-center">This is Data Binding Component</h3>
+<div>Name is : {{name}}</div>
+<div>Name is : <span [innerHTML]="name"></span></div>
+<div>Name is : <span bind-innerHTML="name"></span></div>
+========================================================<br>
+<img src={{img_url}} alt="" class="m-1">
+<img [src]="img_url" alt="" class="m-1">
+<img bind-src="img_url" alt="" class="m-1">
+=========================================================<br>
+<label for="">Name is:- </label>
+<input value="Naganaik M" class="m-3" [disabled]=flag/>
+<label for=""> Class :- </label>
+<input type="text" [value]="class" class="m-3">
+<label for="">Age</label>
+<input [value]=age class="m-1" bind-disabled=flag class="m-3"/>
+<label for="">Address</label>br
+<input for="textarea" bind-value=address class="m-3" /><br>
+<label for="">Address</label>
+<input for="textarea" bind-value=address class="m-3" />
+<label for="">Address</label>
+<input for="textarea" bind-value=address class="m-3" />
+<br>=========================================================<br>
+<button class="btn btn-primary m-1">Button-1</button>
+<button class="btn btn-primary m-1" disabled={{flag}}>Button-2</button>
+<button class="btn btn-primary m-1" [disabled]=flag>Button-3</button>
+<button class="btn btn-primary m-1" bind-disabled=flag>Button-4</button>
+
+<br>=========================================================<br>
+
+<button class="btn btn-primary m-1" (click)="f1()">Button-1</button>
+<button class="btn btn-primary m-1" on-click="f1()">Button-2</button>
+<button class="btn btn-primary m-1" (click)="add(10,20)">Button-3</button>
+<br>=========================================================<br>
+<h2 [hidden]="flag"> Helloooooooooooo Worldddddddddd</h2>
+<button (click)="toggleFlag()">{{flag? 'SHOW' : 'Hide'}}</button>
+<br>=========================================================<br>
+<input type="{{flag? 'text':'password'}}" placeholder="Enter Your password"><br>
+<input type="checkbox" (change)="flag=!flag"> SHOW PASSWORD
+<br>=========================================================<br>
+<textarea cols="30" rows="5" maxlength="100" [(ngModel)]="msg"></textarea>
+<p>Remaining:{{100 - msg.length}}</p>
+<br>=========================================================<br>
+<select [(ngModel)]="selectedState">
+    <option >AP</option>
+    <option>TS</option>
+    <option >GOA</option>
+    <option >MH</option>
+    <option>UP</option>
+    <option >RS</option>
+</select>
+<h2>Your State Name is: {{selectedState}} </h2>
+<br>=========================================================<br>
+<div>
+    <label for="" class="m-1">Input-1</label>
+    <input type="number" [(ngModel)]="input1" placeholder="input 1" class="my-1"><br>
+    <label for="" class="m-1">Input-2</label>
+    <input type="number" [(ngModel)]="input2" placeholder="input 2">
+    <br><br>
+    <button btn btn-primary (click)="add1()" class="btn btn-primary m-1">Add</button>
+    <button (click)="subtract()" class="btn btn-primary m-1">Subtract</button>
+    <button (click)="multiply()" class="btn btn-primary m-1">Multiply</button>
+    <br><br>
+    <div *ngIf="result !== null">
+      Result: {{ result }}
+    </div>
+</div>
+<app-employee-crud>
+<!-- <button (click)="showEmployeeDetails(employee)" data-toggle="modal" data-target="#employeeModal">Details</button> -->
+</app-employee-crud>
+===========================================================================
+<p>Name: {{namee}}</p>
+<p>Name: {{namee |lowercase}}</p>
+<p>Name: {{namee | uppercase}}</p>
+<p>Name: {{namee | titlecase}}</p>
+<hr>
+<p>Date: {{today }}</p>
+<p>Date: {{today | date:'fullDate'}}</p>
+<p>Date: {{today | date:'fullDate' | lowercase}}</p>
+<p>Date: {{today | date:'fullDate' | uppercase}}</p>
+<p>Date: {{today | date:'mediumDate'}}</p>
+<p>Date: {{today | date:'shortDate'}}</p>
+<p>Date: {{today | date:'fullTime'}}</p>
+<p>Date: {{today | date:'mediumTime'}}</p>
+<p>Date: {{today | date:'shortTime'}}</p>
+<p>Date: {{today | date:'dd-MM-yyyy'}}</p>
+<p>Date: {{today | date:'dd.MM.yyyy'}}</p>
+<p>Date: {{today | date:'yyyy.MMMM.dd'}}</p>
+<p>Date: {{today | date:"fullTime":"UTC"}}</p>
+<p>Date: {{today | date:"fullTime":"ist"}}</p>
+<hr>
+<h5>My Salary:{{mySal}}</h5>
+<h5>My Salary:{{mySal |currency}}</h5>
+<h5>My Salary:{{mySal |currency:'INR'}}</h5>
+<h5>My Salary:{{mySal |currency:"&#8377; "}}</h5>
+<h5>My Salary:{{mySal |currency:'	&#8451;'}}</h5>
+<h5>My Salary:{{mySal |currency:'	&#8371; '}}</h5>
+
+<hr>
+
+
+<h5>My Salary:{{numberr |number:'2.2-5'}}</h5>
+<hr>
+{{user}} <br>
+{{user | json}}
+<!-- <h4 ngFor="let entry of user | keyvalue">
+  {{entry.key}}={{entry.value}}
+
+</h4> -->
+
+<h5>{{arr}}</h5>
+<h5>{{arr | slice:2}}</h5>
+<h5>{{arr | slice:2:4}}</h5>
+<h5>{{arr | slice:2:-2}}</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
