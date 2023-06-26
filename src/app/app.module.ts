@@ -14,7 +14,11 @@ import { FormsModule } from '@angular/forms';
 import { EmployeeCRUDComponent } from './components/employee-crud/employee-crud.component';
 import { MainComponent } from './components/main/main.component';
 import { MaskAccnaPipe } from './custom-pipes/mask-accna.pipe';
-
+import { ProductlistComponent } from './components/productlist/productlist.component';
+import { UserComponent } from './components/user/user.component';
+import {HttpClientModule} from '@angular/common/http';
+import { ProductComponent } from './components/product/product.component';
+import { EmpCrudComponent } from './components/emp-crud/emp-crud.component'
 
 @NgModule({
   declarations: [
@@ -28,12 +32,17 @@ import { MaskAccnaPipe } from './custom-pipes/mask-accna.pipe';
     DatabindingComponent,
     EmployeeCRUDComponent,
     MainComponent,
-    MaskAccnaPipe
+    MaskAccnaPipe,
+    ProductlistComponent,
+    UserComponent,
+    ProductComponent,
+    EmpCrudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+<h1 class="text-center">Product Component</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let us of product">
+            <div class="class">
+                <img src="{{us.image}}" alt="" style="width:225px;height:224px;">
+                <div class="card-body">
+                    <h5 class="card-title">Category:- {{ us.category}}</h5>
+                    <p class="card-text my-title">Id:- {{ us.id}}</p>
+                    <p class="card-text my-title">Price:- {{ us.price}}</p>
+                    <p class="card-text my-title">Rating:- {{ us.rating.rate}}</p>
+                    <p class="card-text my-title b">Description:- {{us.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
