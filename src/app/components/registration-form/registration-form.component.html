@@ -1,0 +1,131 @@
+<!-- <h1>Registration Form</h1>
+<form name="registrationForm" onsubmit="return validateForm()">
+<div><label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+</div>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br><br>
+
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required><br><br>
+
+  <label>Gender:</label>
+  <input type="radio" name="gender" value="male" required> Male
+  <input type="radio" name="gender" value="female" required> Female<br><br>
+
+  <label>Hobbies:</label>
+  <input type="checkbox" name="hobbies[]" value="reading" required> Reading
+  <input type="checkbox" name="hobbies[]" value="writing" required> Writing
+  <input type="checkbox" name="hobbies[]" value="gaming" required> Gaming<br><br>
+
+  <label for="country">Country:</label>
+  <select id="country" name="country" required>
+    <option value="">Select</option>
+    <option value="us">United States</option>
+    <option value="uk">United Kingdom</option>
+    <option value="ca">Canada</option>
+  </select><br><br>
+
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4" cols="30" required></textarea><br><br>
+
+  <input type="submit" value="Register">
+</form> -->
+
+<!-- <form (ngSubmit)="submitForm()" #registrationForm="ngForm">
+
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" class="form-control" 
+             required minlength="3" [(ngModel)]="user.name" #name="ngModel">
+      <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+        <div *ngIf="name.errors">
+          Name is required.
+        </div>
+        <div *ngIf="name.errors">
+          Name must be at least 3 characters long.
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" class="form-control" 
+             required email [(ngModel)]="user.email" #email="ngModel">
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+        <div *ngIf="email.errors">
+          Email is required.
+        </div>
+        <div *ngIf="email.errors.email">
+          Invalid email format.
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="gender">Gender</label>
+      <div class="form-check">
+        <input type="radio" id="male" name="gender" class="form-check-input" value="male" 
+               required [(ngModel)]="user.gender">
+        <label for="male" class="form-check-label">Male</label>
+      </div>
+      <div class="form-check">
+        <input type="radio" id="female" name="gender" class="form-check-input" value="female" 
+               required [(ngModel)]="user.gender">
+        <label for="female" class="form-check-label">Female</label>
+      </div>
+      <div *ngIf="gender.invalid " class="alert alert-danger">
+        Gender is required.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label>Languages</label>
+      <div class="form-check">
+        <input type="checkbox" id="english" name="languages" class="form-check-input" value="english" 
+               [(ngModel)]="user.languages">
+        <label for="english" class="form-check-label">English</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="spanish" name="languages" class="form-check-input" value="spanish" 
+               [(ngModel)]="user.languages">
+        <label for="spanish" class="form-check-label">Spanish</label>
+      </div>
+      <div class="form-check">
+        <input type="checkbox" id="french" name="languages" class="form-check-input" value="french" 
+               [(ngModel)]="user.languages">
+        <label for="french" class="form-check-label">French</label>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select id="country" name="country" class="form-control" required [(ngModel)]="user.country">
+        <option value="">Select a country</option>
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+      </select>
+      <div *ngIf="country.invalid " class="alert alert-danger">
+        Country is required.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="bio">Bio</label>
+      <textarea id="bio" name="bio" class="form-control" 
+                required minlength="10" [(ngModel)]="user.bio"></textarea>
+      <div *ngIf="bio.invalid " class="alert alert-danger">
+        <div *ngIf="bio.errors">
+          Bio is required.
+        </div>
+        <div *ngIf="bio.errors">
+          Bio must be at least 10 characters long.
+        </div>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="registrationForm.invalid" class="btn btn-primary">Submit</button>
+  </form>
+   -->

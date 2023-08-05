@@ -18,7 +18,12 @@ import { ProductlistComponent } from './components/productlist/productlist.compo
 import { UserComponent } from './components/user/user.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProductComponent } from './components/product/product.component';
-import { EmpCrudComponent } from './components/emp-crud/emp-crud.component'
+import { EmpCrudComponent } from './components/emp-crud/emp-crud.component';
+import { RegistrationFormComponent } from './components/registration-form/registration-form.component';
+import { HomeComponent } from './components/home/home.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContacUsComponent } from './components/contac-us/contac-us.component';
+import { NotFoundComponent } from './components/not-found/not-found.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { EmpCrudComponent } from './components/emp-crud/emp-crud.component'
     ProductlistComponent,
     UserComponent,
     ProductComponent,
-    EmpCrudComponent
+    EmpCrudComponent,
+    RegistrationFormComponent,
+    HomeComponent,
+    AboutUsComponent,
+    ContacUsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
