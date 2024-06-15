@@ -6,6 +6,7 @@ import { ContacUsComponent } from './components/contac-us/contac-us.component';
 import { ProductComponent } from './components/product/product.component';
 import { UserComponent } from './components/user/user.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProductlistComponent } from './components/productlist/productlist.component';
 
 const routes: Routes = [
   {
@@ -25,9 +26,14 @@ const routes: Routes = [
     component: ProductComponent
   },
   {
+    path: 'productlist',
+    component: ProductlistComponent
+  },
+  {
     path: '**',
     component: NotFoundComponent
-}
+  }
+ 
 ];
 
 @NgModule({

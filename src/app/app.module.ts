@@ -24,6 +24,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContacUsComponent } from './components/contac-us/contac-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component'
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component'
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AgGridModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
